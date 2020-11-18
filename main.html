@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>눈아프지말고래</title>
+    <link href='style.css' rel='stylesheet'>
+    <link href='jquery/jquery-ui.css' rel='stylesheet'>
+    <script src='jquery/jquery-1.12.4.min.js'></script>
+    <script src='jquery/jquery-ui.js'></script>
+</head>
+
+<body>
+    <div class='in'>
+        <div class='intro'>
+            <img id='logo' src="img/whale2.png">
+            <p class='name'>눈아프지말고래</p>
+        </div>
+        <div class='_wrap_eye'>
+            <div class='eye-alarm' id='eye_alarm'>
+                <!-- id 추가!!!!-->
+                <div class='title_area'>
+                    <input class='title' type='text' value="눈 운동" readonly>
+                </div>
+                <div class='time_area'>
+                    <div class="toggle-radio">
+                        <input type="radio" name="rdo0" value='am' id="am0" checked>
+                        <input type="radio" name="rdo0" value='pm' id="pm0">
+                        <div class="switch_rdo">
+                            <label for="am0">오전</label>
+                            <label for="pm0">오후</label>
+                            <span></span>
+                        </div>
+                    </div>
+                    <input class='hour' type='text' placeholder='00' maxlength="2">
+                    <p class="colon">:</p>
+                    <input class='min' type='text' placeholder='00' maxlength="2">
+                </div>
+                <div class='activate_area'>
+                    <input class='powerBtn0' type='button'>
+                    <div class='wrap'>
+                        <label class='switch'>
+                            <input type='checkbox' class='checkbox' id='toggle0'>
+                            <span class='toggle'></span>
+                        </label>
+                        <div class='transp'>
+                            <button class='togBtn' id='transBtn0'></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr size=2 color='gray'>
+
+        
+            <div class='_wrap' id='_wrap1'>
+                <div class='schedule-alarm' id='alarm1'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note1' type='button' value="">
+                    </div>
+
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker1' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input class='ampmrdo' type="radio" name=rdo1 value='am' id="am1" checked>
+                            <input class='ampmrdo' type="radio" name=rdo1 value='pm' id="pm1">
+                            <div class="switch_rdo">
+                                <label for="am1">오전</label>
+                                <label for="pm1">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power1'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle1'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn1'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo1'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap2'>
+                <div class='schedule-alarm' id='alarm2'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note2' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker2' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo2 id="am2" checked>
+                            <input type="radio" name=rdo2 id="pm2">
+                            <div class="switch_rdo">
+                                <label for="am2">오전</label>
+                                <label for="pm2">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power2'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle2'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn2'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo2'></textarea>
+                    </div>
+
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap3'>
+                <div class='schedule-alarm' id='alarm3'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note3' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker3' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo3 value='am' id="am3" checked>
+                            <input type="radio" name=rdo3 value='pm' id="pm3">
+                            <div class="switch_rdo">
+                                <label for="am3">오전</label>
+                                <label for="pm3">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power3'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle3'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn3'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo3'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap4'>
+                <div class='schedule-alarm' id='alarm4'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note4' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker4' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo4 id="am4" checked>
+                            <input type="radio" name=rdo4 id="pm4">
+                            <div class="switch_rdo">
+                                <label for="am4">오전</label>
+                                <label for="pm4">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power4'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle4'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn4'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo4'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap5'>
+                <div class='schedule-alarm' id='alarm5'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note5' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker5' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo5 id="am5" checked>
+                            <input type="radio" name=rdo5 id="pm5">
+                            <div class="switch_rdo">
+                                <label for="am5">오전</label>
+                                <label for="pm5">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power5'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle5'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn5'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo5'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap6'>
+                <div class='schedule-alarm' id='alarm6'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note6' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker6' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo6 id="am6" checked>
+                            <input type="radio" name=rdo6 id="pm6">
+                            <div class="switch_rdo">
+                                <label for="am6">오전</label>
+                                <label for="pm6">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power6'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle6'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn6'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo6'></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class='_wrap' id='_wrap7'>
+                <div class='schedule-alarm' id='alarm7'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note7' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker7' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo7 id="am7" checked>
+                            <input type="radio" name=rdo7 id="pm7">
+                            <div class="switch_rdo">
+                                <label for="am7">오전</label>
+                                <label for="pm7">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power7'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle7'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn7'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo7'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap8'>
+                <div class='schedule-alarm' id='alarm8'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note8' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker8' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo8 id="am8" checked>
+                            <input type="radio" name=rdo8 id="pm8">
+                            <div class="switch_rdo">
+                                <label for="am8">오전</label>
+                                <label for="pm8">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power8'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle8'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn8'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo8'></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class='_wrap' id='_wrap9'>
+                <div class='schedule-alarm' id='alarm9'>
+                    <div class='title_area'>
+                        <input class='title' type='text' placeholder='일정쓰기' maxlength="4">
+                        <input class='noteBtn' id='note9' type='button' value="">
+                    </div>
+                    <div class='time_area'>
+                        <input type='text' class='date' id='datepicker9' placeholder="날짜를 선택하세요">
+                        <div class="toggle-radio">
+                            <input type="radio" name=rdo9 id="am9" checked>
+                            <input type="radio" name=rdo9 id="pm9">
+                            <div class="switch_rdo">
+                                <label for="am9">오전</label>
+                                <label for="pm9">오후</label>
+                                <span></span>
+                            </div>
+                        </div>
+                        <input class='hour' type='text' placeholder='00' maxlength="2">
+                        <p class="colon">:</p>
+                        <input class='min' type='text' placeholder='00' maxlength="2">
+                    </div>
+                    <div class='activate_area'>
+                        <input class='powerBtn' type='button' id='power9'>
+                        <div class='wrap'>
+                            <label class='switch'>
+                                <input type='checkbox' class='checkbox' id='toggle9'>
+                                <span class='toggle'></span>
+                            </label>
+                            <div class='transp'>
+                                <button class='togBtn' id='transBtn9'></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='memo_area'>
+                        <textarea class='memo' placeholder="메모를 입력하세요" id='memo9'></textarea>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <script src='alarms.js'></script>
+</body>
+
+</html>
