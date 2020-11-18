@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "눈아프지말고래",
+    "version": "1.0.3",
+  
+    "sidebar_action": {
+        "default_page" : "main.html",
+        "default_icon": {
+            "128":"img/icon128.png"
+        },
+  
+        "default_title" : "눈아프지말고래", 
+        "use_navigation_bar": false         
+    },
+
+    "icons": {
+      "128":"img/icon.png"
+    },
+
+    "description" : "눈 운동, 알람 기능을 제공하는 눈아프지말고래입니다!",
+
+    "background":{
+      "scripts":["background.js"],
+      "persistent" : false
+    },
+    
+    "permissions":[
+      "notifications",
+      "alarms",
+      "storage"
+    ]
+  }
