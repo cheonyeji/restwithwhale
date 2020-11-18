@@ -1,0 +1,772 @@
+/*나눔스퀘어라운드 웹폰트 적용*/
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'NanumSquareRound';
+    font-weight: 400; /*Regular(400), Bold(700), Extra Bold(800), Light(300)*/
+    color:white;  
+}
+.out {
+    width:100%;
+   
+}
+.in {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background: url('img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:1430px;
+}                                                                                                                                                                                
+
+
+/*Toggle Switch*/
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.toggle
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border: solid 1px gray;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.switch input {display:none}
+
+.toggle:before
+{
+    position: absolute;
+    content:"";
+    height: 26px;
+    width: 26px;
+    left: 1px;
+    bottom: 1px;
+    background-color:white;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+input:checked + .toggle
+{
+    color: #52D9B8;
+    background-color: #52D9B8;
+}
+
+input:checked + .toggle:before
+{
+    transform: translateX(20px);
+}
+
+
+/*********DIV Layout*********/
+.intro{
+    width:100%;
+    height: 20px;
+    background-color: rgba(121, 121, 121, 0.425);
+    display: flex;
+}
+.name{
+    margin-top:3px;
+    font-size:14px;
+    color:white;
+    letter-spacing: 1.5px;
+    margin-left: 5px;
+}
+#logo {
+    margin-left:5px;
+}
+._wrap{
+    width:100%;
+    background-color: rgba(114,114,114,0.342);
+}
+._wrap_eye{
+    width:100%;
+}
+/*눈운동 Layout*/
+.eye-alarm{
+    margin-top:10px;
+    margin-bottom: 20px;
+    display: flex;
+    width:390px;
+    height: 110px;
+    text-align: center;
+    margin : 0 auto;
+}
+#logo_whale {
+    width:60px;
+    height: auto;
+    margin-bottom: 30px;
+    margin-left:20px;
+}
+/*Schedule Alarm Layout*/
+.schedule-alarm
+{
+   width:390px; height: 145px;
+   display: flex;
+   flex-flow: wrap;
+   background-color: transparent;
+   text-align: center;
+    margin : 0 auto;
+}
+.title_area {
+    width: 95px; height: 32px; 
+    background-color: transparent;
+    margin-top:40px;
+} 
+.time_area {
+    width: 175px; height: 32px;
+    background-color: transparent;
+    margin-top:40px;
+    margin-left:15px;
+}
+.activate_area {
+    width: 95px; height: 72px;
+    background-color: transparent;
+}
+.memo_area {
+    width: 380px; height: 30px;
+    display: none;
+}
+/***** title_area div*****/
+
+.noteBtn {
+    margin-left:20%;
+    margin-top:7px;
+    background: url("img/note_16.png") no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    height: 20px;
+    width: 20px;
+    cursor : pointer;
+    background-size: contain;
+}
+
+.noteBtn:hover{
+    box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.089) inset, 
+    0 -10px 0 0 rgba(0,0,0,0.089) inset;
+}
+.title { 
+    margin-left:18%;
+    margin-right: 3%;
+    width: 70px;
+    border: none;
+    font-size:16px;
+    background-color: transparent;
+    text-align: center;
+}
+
+/***** time_area div*****/
+#datepicker1 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker2 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker3 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker4 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker5 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker6 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker7 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker8 {
+    border:none;
+    background-color:transparent;
+}
+#datepicker9 {
+    border:none;
+    background-color:transparent;
+}
+
+.toggle-radio{
+    display:inline-block;
+    width:50px;
+}
+.switch_rdo {
+    position: relative;
+    width: 65px;
+    height: 15px;
+    text-align: center;
+    display:inline-block;
+    transition: all 0.2s ease;
+    border-radius: 25px;
+}
+ 
+input[type=radio] {
+    display: none;
+}
+.switch_rdo label {
+    cursor: pointer;
+    color: rgba(194, 194, 194, 0.397);
+    width: 38px;
+    transition: all 0.2s ease;
+    font-size:13px;
+}
+
+/*label*/
+label[for=am0] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm0] {
+    position: absolute;
+    right: 0px;
+}
+#pm0:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am0:checked ~ .switch_rdo label[for=am0] {
+    color: #fff;
+}
+ 
+#pm0:checked ~ .switch_rdo label[for=pm0] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am1] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm1] {
+    position: absolute;
+    right: 0px;
+}
+#pm1:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am1:checked ~ .switch_rdo label[for=am1] {
+    color: #fff;
+}
+ 
+#pm1:checked ~ .switch_rdo label[for=pm1] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am2] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm2] {
+    position: absolute;
+    right: 0px;
+}
+#pm2:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am2:checked ~ .switch_rdo label[for=am2] {
+    color: #fff;
+}
+ 
+#pm2:checked ~ .switch_rdo label[for=pm2] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am3] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm3] {
+    position: absolute;
+    right: 0px;
+}
+#pm3:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am3:checked ~ .switch_rdo label[for=am3] {
+    color: #fff;
+}
+ 
+#pm3:checked ~ .switch_rdo label[for=pm3] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am4] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm4] {
+    position: absolute;
+    right: 0px;
+}
+#pm4:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am4:checked ~ .switch_rdo label[for=am4] {
+    color: #fff;
+}
+ 
+#pm4:checked ~ .switch_rdo label[for=pm4] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am5] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm5] {
+    position: absolute;
+    right: 0px;
+}
+#pm5:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am5:checked ~ .switch_rdo label[for=am5] {
+    color: #fff;
+}
+ 
+#pm5:checked ~ .switch_rdo label[for=pm5] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am6] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm6] {
+    position: absolute;
+    right: 0px;
+}
+#pm6:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am6:checked ~ .switch_rdo label[for=am6] {
+    color: #fff;
+}
+ 
+#pm6:checked ~ .switch_rdo label[for=pm6] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am7] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm7] {
+    position: absolute;
+    right: 0px;
+}
+#pm7:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am7:checked ~ .switch_rdo label[for=am7] {
+    color: #fff;
+}
+ 
+#pm7:checked ~ .switch_rdo label[for=pm7] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am8] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm8] {
+    position: absolute;
+    right: 0px;
+}
+#pm8:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am8:checked ~ .switch_rdo label[for=am8] {
+    color: #fff;
+}
+ 
+#pm8:checked ~ .switch_rdo label[for=pm8] {
+    color: #fff;
+}
+
+/*label*/
+label[for=am9] {
+    position: absolute;
+    left: 0px;
+    height: 20px;
+}
+label[for=pm9] {
+    position: absolute;
+    right: 0px;
+}
+#pm9:checked ~ .switch_rdo span:after {
+    background: #fff;
+    height: 20px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+#am9:checked ~ .switch_rdo label[for=am9] {
+    color: #fff;
+}
+ 
+#pm9:checked ~ .switch_rdo label[for=pm9] {
+    color: #fff;
+}
+
+/* 시,분 위치 바뀜 -> 수정완료 */
+.hour {
+    width:21px;
+    display:inline-block;
+    border: none;
+    color:white;
+    margin-left:15px;
+    font-size: 18px;
+    background-color: transparent;
+    margin-top:5px;
+    text-align: center;
+}
+.colon{
+    width:15px;
+    display:inline-block;
+    margin-left:10px;
+    font-size: 18px;
+    margin-top:5px;
+}
+.min {
+    width:21px;
+    display:inline-block;
+    border: none;
+    color : white;
+    margin-right:10px;
+    margin-top:5px;
+    font-size: 18px;
+    background-color: transparent;
+    text-align: center;
+}
+/***** activate_area div*****/
+.powerBtn0{
+    height: 16px;
+    width: 16px;
+    margin-top:15px;
+    margin-left:70px;
+    visibility: hidden;
+}
+.powerBtn {
+    background: url("img/powerbt_off.png") no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    height: 16px;
+    width: 16px;
+    margin-top:15px;
+    margin-left:70px;
+    cursor : pointer;
+}
+.powerBtn:hover{
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.095) inset, 
+    0 -8px 0 0 rgba(255, 255, 255, 0.095) inset;
+}
+.transp {
+    position: absolute;
+    width: 10px; height: 30px;
+    top:10%;
+}
+.wrap {
+    margin-top:13px;
+    position: relative;
+    width: 50px; height: 30px;
+}
+.togBtn {
+    background-color:transparent;
+    color:white;
+    border:0; outline:0;
+    width: 50px; height: 30px;
+    margin-left:10px;
+}
+
+/***** memo_area div*****/
+.memo {
+    
+    width :300px;
+    height: 27px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.212);
+    border:none;
+    font-weight: 300;
+    overflow: auto;
+    padding:10px;
+    resize: none;
+}
+
+
+/********* datepicker css *********/
+
+
+.ui-datepicker {
+    font-family: 'NanumSquareRound';
+    font-weight: 300;
+    margin-top: 2px;
+    padding: .2em .4em 0 !important;
+    border-color: #c9f0f5 !important;
+    width: 256px;
+    text-align: center;
+    font-size:11px;
+}
+
+.ui-datepicker table {
+    width: 256px;
+    table-layout: fixed;
+}
+
+.ui-datepicker-header {
+    background-color: #4a636b93 !important;
+    background-image: url('img/background3.jpg') !important;
+    border-radius: 0;
+}
+
+.ui-datepicker-title {
+    line-height: 35px !important;
+    margin: 0 10px !important;
+}
+
+/* 월 < > 넘어가는 부분 */
+.ui-datepicker-prev span {
+    display: none !important;
+}
+
+.ui-datepicker-next {
+    text-align: center;
+}
+
+.ui-datepicker-next span {
+    display: none !important;
+}
+
+.ui-datepicker-prev {
+    background-color: transparent !important;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAUklEQVQYlXWPwQnAMAwDj9IBOlpH8CjdJLNksuujFIJjC/w6WUioFBcqJ7sGEAD5Y/hpqLRghRv4YQlUjqXI3Kql2MixraGbEhVcDXcFUR/1egEHNuTBpFW0NgAAAABJRU5ErkJggg==') !important;
+    height: 12px !important;
+    width: 7px !important;
+    margin: 14px 12px;
+    display: inline-block;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.ui-datepicker-next {
+    cursor: pointer;
+}
+
+.ui-datepicker-prev {
+    cursor: pointer;
+}
+
+.ui-datepicker-next {
+    background-color: transparent !important;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAYAAABfnvydAAAAVUlEQVQYlXWQ0Q3AIAhEL07gKI7kKN2kI3Wk1w9to3KQEELucQEECOizhhTQGHFnwOdgobWx0GkZILfYBhXl0STVbPoBarbkL7ozN/F8VBBXh8uJgF5r2hrI4GHUkAAAAABJRU5ErkJggg==') !important;
+    height: 12px !important;
+    width: 8px !important;
+    margin: 14px 12px;
+    display: inline-block;
+    right: 0 !important;
+    top: 0 !important;
+}
+
+.ui-datepicker-month {
+    border-radius: 2px;
+    width: 110px !important;
+    height: 22px;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: left;
+    border: none !important;
+    margin-right: 17px !important;
+    vertical-align: text-top;
+}
+
+.ui-datepicker-year {
+    border-radius: 2px;
+    width: 61px !important;
+    height: 22px;
+    border: none !important;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: text-top;
+    margin-left:15px;
+}
+
+
+.ui-datepicker-month option,
+.ui-datepicker-year option {
+    color: #3985a0 !important;
+    background-color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 600;
+}
+
+.ui-datepicker-month option[selected],
+.ui-datepicker-year option[selected] {
+    background-color: #e5edf0 !important;
+}
+
+.ui-datepicker .ui-state-hover {
+    /*background: none !important;*/
+    border: 0 !important;
+}
+
+.ui-datepicker td {
+    vertical-align: top;
+}
+
+.ui-datepicker .ui-state-default {
+    border-radius: 2px;
+    border-color: #edebeb !important;
+/*     background: white !important; */
+    width: 24px;
+    height: 24px;
+    padding: 0 !important;
+    line-height: 24px;
+    text-align: center !important;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 400 !important;
+    margin: 7px 0 0 4px;
+}
+
+.ui-datepicker .ui-state-default.ui-state-highlight{
+    border-color: #dcdcdc;
+    background-color: #cff3f8 !important;
+    color: #073a4b !important;
+}
+
+.ui-datepicker-week {
+    color : black !important;
+}
+
+.ui-datepicker td {
+    width: 33px;
+}
+.ui-state-default.ui-state-hover {
+    border-color: #dcdcdc;
+    background-color: #cff3f8 !important;
+}
+
+.ui-datepicker .ui-state-active {
+    border-color: #dcdcdc;
+    background-color: #cff3f8 !important;
+    color: #3e9bba41 !important;
+} 
+
+
+
+.ui-datepicker-calendar thead tr th {
+    color: #275e64;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0.45em 0.3em !important;
+    /*   width: 15px !important; */
+}
+
+.ui-datepicker-close {
+    display: none;
+}
+
+.ui-datepicker thead {
+    background-color: #f5f5f5;
+}
+
+
+.ui-state-default.ui-datepicker-current {
+    float: none !important;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    border-width: 0 !important;
+    border: none;
+    vertical-align: top;
+    margin: 0 !important;
+    background-color: transparent !important;
+}
+
+.ui-datepicker-buttonpane.ui-widget-content {
+    text-align: center;
+    background-color: #3e9aba;
+    margin: 0 !important;
+    height: 28px;
+    padding: 0 !important;
+}
+
+.ui-datepicker-calendar thead tr th.ui-datepicker-week-end span
+{
+    color:black;
+}
+.ui-datepicker-calendar thead tr th span
+{
+    color:black;
+}
